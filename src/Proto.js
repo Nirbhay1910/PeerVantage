@@ -61,6 +61,59 @@ function Proto() {
     });
     document.getElementById('video-grid').append(video);
   };
+
+  const muteUnmute = () => {
+    const enabled = stream.getAudioTracks()[0].enabled;
+    if (enabled) {
+      stream.getAudioTracks()[0].enabled = false;
+      setUnmuteButton();
+    } else {
+      setMuteButton();
+      stream.getAudioTracks()[0].enabled = true;
+    }
+  };
+  const setMuteButton = () => {
+    const html = `
+      <i class="fas fa-microphone"></i>
+      <span>Mute</span>
+    `;
+    document.querySelector('.main__mute_button').innerHTML = html;
+  };
+
+  const setUnmuteButton = () => {
+    const html = `
+      <i class="unmute fas fa-microphone-slash"></i>
+      <span>Unmute</span>
+    `;
+    document.querySelector('.main__mute_button').innerHTML = html;
+  };
+  const playStop = () => {
+    console.log('object');
+    let enabled = stream.getVideoTracks()[0].enabled;
+    if (enabled) {
+      stream.getVideoTracks()[0].enabled = false;
+      setPlayVideo();
+    } else {
+      setStopVideo();
+      stream.getVideoTracks()[0].enabled = true;
+    }
+  };
+  const setStopVideo = () => {
+    const html = `
+      <i class="fas fa-video"></i>
+      <span>Stop Video</span>
+    `;
+    document.querySelector('.main__video_button').innerHTML = html;
+  };
+
+  const setPlayVideo = () => {
+    const html = `
+    <i class="stop fas fa-video-slash"></i>
+      <span>Play Video</span>
+    `;
+    document.querySelector('.main__video_button').innerHTML = html;
+  };
+
   return (
     <div className='Proto'>
       <div className='main__left'>
@@ -72,11 +125,17 @@ function Proto() {
         </div>
         <div className='main__controls'>
           <div className='main__controls__block'>
-            <div className='main__controls__button main__mute_button'>
+            <div
+              onClick={muteUnmute}
+              className='main__controls__button main__mute_button'
+            >
               <i className='fas fa-microphone'></i>
               <span>Mute</span>
             </div>
-            <div className='main__controls__button main__video_button'>
+            <div
+              onClick={playStop}
+              className='main__controls__button main__video_button'
+            >
               <i className='fas fa-video'></i>
               <span>Stop Video</span>
             </div>

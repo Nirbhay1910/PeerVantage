@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import './Hero.css';
 import GLOBE from 'vanta/dist/vanta.globe.min';
 
 function Hero() {
@@ -25,7 +26,17 @@ function Hero() {
       if (vantaEffect) vantaEffect.destroy();
     };
   }, [vantaEffect]);
-  return <div ref={myRef}></div>;
+  return (
+    <div>
+      <div ref={myRef}></div>
+      <div className='tagline'>
+        <h1>
+          <span>Learn</span> and <span>Grow</span> Together
+        </h1>
+        <h3> having fun and getting things done on time</h3>
+      </div>
+    </div>
+  );
 }
 
 export default Hero;

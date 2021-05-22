@@ -1,0 +1,10 @@
+.tagline {
+  margin-top: 35vh;
+  position: absolute;
+  z-index: 100;
+  color: white;
+  margin-left: 10vw;
+}
+span {
+  color: #eb54e5;
+}

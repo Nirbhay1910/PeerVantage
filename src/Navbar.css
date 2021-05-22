@@ -1,0 +1,30 @@
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  background-color: #111;
+}
+.navbar__option {
+  margin: 10px;
+}
+.main__title {
+  margin-left: 30px;
+  color: white;
+  font-family: cursive;
+  font-size: 36px;
+}
+.navbar__options > input {
+  border-radius: 20px;
+}
+.navbar__options > input:focus {
+  outline: none;
+}
+.navbar__options > a {
+  text-decoration: none;
+  padding: 5px;
+  background-color: #eb54e5;
+  border: solid 1px gray;
+  color: white;
+  border-radius: 20px;
+}

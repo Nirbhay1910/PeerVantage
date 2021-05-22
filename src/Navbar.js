@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
+import './Navbar.css';
 
 function Navbar() {
   const [roomId, setRoomId] = useState();
@@ -10,9 +11,20 @@ function Navbar() {
   }, []);
   return (
     <div className='Navbar'>
-      <input onChange={(e) => setJoinRoomId(e.target.value)} />
-      <Link to={`/:${joinRoomId}`}>Join Room </Link>
-      <Link to={`/:${roomId}`}>Create Room</Link>
+      <div className='main__title'>PeerVantage</div>
+      <div className='navbar__options'>
+        <input
+          placeholder='Enter the room code'
+          className='navbar__option'
+          onChange={(e) => setJoinRoomId(e.target.value)}
+        />
+        <Link className='navbar__option' to={`/:${joinRoomId}`}>
+          Join Room{' '}
+        </Link>
+        <Link className='navbar__option' to={`/:${roomId}`}>
+          Create Room
+        </Link>
+      </div>
     </div>
   );
 }
