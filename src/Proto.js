@@ -4,10 +4,11 @@ import io from 'socket.io-client';
 import Peer from 'peerjs';
 import { useParams } from 'react-router';
 import Loading from './Loading';
-const socket = io.connect('http://localhost:5000');
+const socket = io.connect('https://peervantage-server.herokuapp.com/');
 const myPeer = new Peer(undefined, {
-  host: '/',
-  port: 5000,
+  secure: true,
+  host: 'peervantage-server.herokuapp.com',
+  port: 443,
   path: '/peerjs',
 });
 function Proto() {
