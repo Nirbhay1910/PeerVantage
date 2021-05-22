@@ -5,6 +5,6 @@
   color: white;
   margin-left: 10vw;
 }
-span {
+.tagline > h1 > span {
   color: #eb54e5;
 }

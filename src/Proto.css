@@ -1,5 +1,8 @@
+.quiz {
+  overflow-y: scroll;
+}
 .active {
-  background-color: orange;
+  background-color: orange !important;
 }
 .Proto {
   display: flex;
@@ -17,7 +20,12 @@ body {
   background-color: #242324;
   padding: 70px;
 }
-
+.quiz__box {
+  background-color: #fff;
+  padding: 70px;
+  flex-grow: 1;
+  overflow-y: scroll;
+}
 video {
   height: 200px;
   width: 200px;
@@ -48,10 +56,24 @@ video {
   padding: 40px;
 }
 
-/* .main__controls {
-  background-color: #1c1e20;
-} */
-
+.category__btn {
+  margin: 10px;
+  padding: 7px;
+  border-radius: 20px;
+  min-width: 150px;
+  align-items: center;
+  background-color: #5ec0f8;
+  color: white;
+}
+.start__btn {
+  margin: 10px;
+  padding: 7px;
+  border-radius: 20px;
+  min-width: 150px;
+  align-items: center;
+  background-color: #eb54e5;
+  color: white;
+}
 .main__right {
   background-color: #242324;
   border-left: 1px solid #3d3d42;
@@ -95,4 +117,39 @@ video {
 .unmute,
 .stop {
   color: #cc3b33;
+}
+.quiz__settings > h1 {
+  color: #2f4f4f;
+  font-size: 36px;
+  margin: 5px;
+}
+.quiz__questions > h3 {
+  color: #2f4f4f;
+  font-size: 24px;
+  margin: 10px;
+}
+.quiz__option__btn {
+  margin: 10px;
+  padding: 7px;
+  border-radius: 20px;
+  min-width: 150px;
+  align-items: center;
+}
+.submit__quiz__btn {
+  margin: 10px;
+  padding: 7px;
+  border-radius: 20px;
+  min-width: 150px;
+  align-items: center;
+  background-color: #eb54e5;
+  color: white;
+}
+.another__quiz {
+  margin: 3px;
+  padding: 7px;
+  border-radius: 20px;
+  min-width: 150px;
+  align-items: center;
+  background-color: #eb54e5;
+  color: white;
 }
