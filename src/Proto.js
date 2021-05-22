@@ -62,8 +62,27 @@ function Proto() {
     document.getElementById('video-grid').append(video);
   };
   return (
-    <div>
-      <div id='video-grid'></div>
+    <div className='Proto'>
+      <div className='main__left'>
+        <div className='quiz__box'></div>
+      </div>
+      <div className='main__right'>
+        <div className='main__videos'>
+          <div id='video-grid'></div>
+        </div>
+        <div className='main__controls'>
+          <div className='main__controls__block'>
+            <div className='main__controls__button main__mute_button'>
+              <i className='fas fa-microphone'></i>
+              <span>Mute</span>
+            </div>
+            <div className='main__controls__button main__video_button'>
+              <i className='fas fa-video'></i>
+              <span>Stop Video</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

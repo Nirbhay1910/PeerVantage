@@ -17,6 +17,7 @@
     "simple-peer": "^9.11.0",
     "socket.io-client": "^4.1.2",
     "uuid": "^8.3.2",
+    "vanta": "^0.5.21",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import './App.css';
 import Proto from './Proto';
-import { v4 as uuidv4 } from 'uuid';
+import Hero from './Hero';
+import Navbar from './Navbar';
 function App() {
-  const [roomId, setRoomId] = useState();
-  useEffect(() => {
-    setRoomId(uuidv4());
-  }, []);
-
   return (
     <div className='App'>
       <Router>
@@ -16,7 +13,8 @@ function App() {
             <Proto />
           </Route>
           <Route path='/'>
-            <Link to={`/${roomId}`}>CREATE ROOM</Link>
+            <Navbar />
+            <Hero />
           </Route>
         </Switch>
       </Router>
