@@ -10,6 +10,16 @@ const myPeer = new Peer(undefined, {
   host: 'peervantage-server.herokuapp.com',
   port: 443,
   path: '/peerjs',
+  config: {
+    iceServers: [
+      { url: 'stun:stun1.l.google.com:19302' },
+      {
+        url: 'turn:numb.viagenie.ca',
+        credential: 'muazkh',
+        username: 'webrtc@live.com',
+      },
+    ],
+  },
 });
 function Proto() {
   const { roomId } = useParams();
