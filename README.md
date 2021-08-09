@@ -1,8 +1,12 @@
 # PeerVantage
 This project is made using MERN stack.
+<br/>
 This project helped our team in bagging 3rd prize in Wiehack 3.0 an international level hackathon.
+<br/>
 Website is hosted at: https://peervantage.netlify.app/
+<br/>
 Video Link: https://drive.google.com/file/d/1qzs1neZjh07rGV9GziI8vvi8J6cMb837/view?usp=sharing
+<br/>
 Backend Code Github Link: https://github.com/Nirbhay1910/PeerVantage-server
 ## Features
 
